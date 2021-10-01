@@ -1,14 +1,11 @@
-# British Virgin Island ülkesine ait 1971-2016 yılları arasındaki
-# kentsel nüfus artışı ve CO2 emisyonu ile ilgili verilerin bulunduğu 
-# excel dosyasından verilerin R programına aktarılması.
+# British Virgin Island ülkesine ait 1971-2016 yılları arasındaki kentsel nüfus artışı ve CO2 emisyonu ile ilgili verilerin bulunduğu excel dosyasından verilerin R programına aktarılması.
 
 install.packages("readxl")
 library("readxl")
 british_virgin_island<-read_excel("/Users/busraozkan/Desktop/British_Virgin_Island Verileri.xlsx")
 british_virgin_island
 
-# Kentsel nüfus artışı değişkeni X değişkeni (bağımsız değişken), 
-# CO2 emisyonu değişkeni Y değişkeni (bağımlı değişken) olarak tanımlanır.
+# Kentsel nüfus artışı değişkeni X değişkeni (bağımsız değişken), CO2 emisyonu değişkeni Y değişkeni (bağımlı değişken) olarak tanımlanır.
 X<-british_virgin_island$X__Urban_population_growth
 Y<-british_virgin_island$Y__CO2_emissions
 year<-seq(1971,2016,1)
